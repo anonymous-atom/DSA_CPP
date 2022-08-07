@@ -13,7 +13,7 @@ int main() {
 
     int dim = 4; int r = 3; int c = 4;
     int indx = dim*(r-1) - ((dim-2)*(dim - 1)/2) + c - r;
-    set(Arr, dim, r, c, 44);
+    set(Arr, dim, r, c, 10);
     std::cout<<Arr[indx];
 }
 

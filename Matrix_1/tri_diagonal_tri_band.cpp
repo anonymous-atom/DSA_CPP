@@ -1,6 +1,8 @@
 //
 // Created by karun on 8/8/22.
 //Tri Diagonal Matrix
+
+//For Tri-Band There Can Be More Than 1 Diagonal Matrix Above And Below The Main Diagonal Matrix
 #include <iostream>
 using std::cout;
 void set(int Arr[], int r, int c, int n, int x);

@@ -3,4 +3,4 @@ project(Matrix_1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main.cpp Matrix_1 Matrix_1/matrix_lower_row.cpp Matrix_1/matrix_lower_col.cpp Matrix_1/matrix_upper_row.cpp Matrix_1/matrix_upper_col.cpp Matrix_1/symmetrix_matrix.cpp)
+add_executable(Matrix_1/symmetrix_matrix.cpp)

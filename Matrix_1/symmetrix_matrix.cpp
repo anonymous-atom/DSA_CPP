@@ -11,13 +11,14 @@ void set(int Arr[], int r, int c, int x);
 int main() {
     int Arr[10];
     int r = 4; int c = 3; int x = 66;
-
-
+    set(Arr, r, c, 22);
+    int indx = ((r)*(r-1)/2) + c-1;
+    std::cout<<Arr[7];
 }
 
 void set(int Arr[], int r, int c, int x) {
     if(r >= c) {
-        int indx = (r*(r-1)/2) + c -1;
+        int indx = ((r)*(r-1)/2) + c-1;
         Arr[indx] = x;
     }
 }

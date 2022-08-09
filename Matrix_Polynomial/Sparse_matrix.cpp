@@ -67,6 +67,8 @@ Sparse add(Sparse *s1, Sparse *s2){
 
      for(;j < s2->num; j++)
         sum->e[k++] = s2->e[j];
+
+     sum->num = k;
 }
 
 

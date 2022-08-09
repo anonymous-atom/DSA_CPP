@@ -60,6 +60,13 @@ Sparse add(Sparse *s1, Sparse *s2){
              }
          }
      }
+
+     //For adding elements left
+     for(;i < s1->num; i++)
+         sum->e[k++] = s1->e[i];
+
+     for(;j < s2->num; j++)
+        sum->e[k++] = s2->e[j];
 }
 
 

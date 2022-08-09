@@ -26,6 +26,28 @@ int Evaluate_Poly(const Poly &pol, int x) {
     return sum;
 }
 
+//Function To Add 2 Polynomials
+Poly* Add_Poly(const Poly &pol1, const Poly &pol2) {
+    Poly *pol_out = new Poly;
+    int i, j, k = 0;
+    while (i < pol1.n && j < pol2.n) {
+
+        if(pol1.m[i].exp > pol2.m[j].exp)
+            pol_out->m[k++] = pol1.m[i++];
+
+        else if(pol1.m[i].exp < pol2.m[j].exp)
+            pol_out->m[k++] = pol2.m[j++];
+
+        else {
+            pol_out->m[k].exp = pol1.m[i].exp;
+            pol_out->m[k].coeff = pol1.m[i].coeff + pol1.m[i].coeff;
+        }
+    }
+    return pol_out;
+}
+
+
+
 int main() {
     struct Poly *p;
     std::cin>>p->n;

@@ -3,6 +3,8 @@
 //
 
 #include <iostream>
+#include <valarray>
+
 using std::cout;
 using std::cin;
 
@@ -15,6 +17,14 @@ struct Poly {
     int n; //Number of terms in polynomial
     struct Term *m;
 };
+
+int Evaluate_Poly(const Poly &pol, int x) {
+    static int sum = 0;
+    for(int i = 0; i < pol.n; i++) {
+        sum += pol.m[i].coeff * std::pow(x, pol.m[i].exp);
+    }
+    return sum;
+}
 
 int main() {
     struct Poly *p;

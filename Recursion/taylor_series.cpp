@@ -25,8 +25,18 @@ float TaylorR(float x, float n) {
         return static_cast<float>(powr(x, n))/static_cast<float>(factR(n)) + TaylorR(x, n-1);
 }
 
+float Taylor_Horner(float x, float n) {
+    static float result = 1;
+    if(n == 0)
+        return result;
+    result = 1 + (static_cast<float>(x)/n) * result;
+
+    return Taylor_Horner(x, n-1);
+
+}
+
 
 int main() {
-    float Taylor = TaylorR(4, 40);
+    float Taylor = Taylor_Horner(4, 40);
     std::cout<<Taylor;
 }

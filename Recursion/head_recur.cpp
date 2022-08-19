@@ -1,6 +1,6 @@
 //
 // Created by karun on 19/8/22.
-//Head Recursion, Function Call Before End Of Programme.
+//Head Recursion, Function Call At The Beginning Of The Programme.
 #include <iostream>
 using std::cout;
 

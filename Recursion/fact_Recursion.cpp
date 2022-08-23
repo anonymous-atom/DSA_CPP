@@ -3,6 +3,8 @@
 //Recursive function to find factorial
 
 #include <cstdio>
+#include <ctime>
+#include <iostream>
 
 int factR(int n) {
     if(n == 0)
@@ -12,6 +14,9 @@ int factR(int n) {
 }
 
 int main() {
+    int st= (double)clock();
     int fact_Out = factR(4);
     printf("%d", fact_Out);
+    std::cout<<"\n";
+    std::cout<<st;
 }

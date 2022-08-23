@@ -18,5 +18,5 @@ int main() {
     int fact_Out = factR(4);
     printf("%d", fact_Out);
     std::cout<<"\n";
-    std::cout<<st;
+    std::cout<<((double)clock() - st)/CLOCKS_PER_SEC;
 }

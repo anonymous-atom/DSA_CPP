@@ -2,10 +2,22 @@
 // Created by karun on 24/8/22.
 //Implementing Linked List
 
+
+#include <iostream>
+
 struct Node {
     int data;
     struct Node *next;
 };
+
+void Print_Linked(struct Node *n) {
+    //Printing Until The Last Node Is Pointing Nowhere
+    while (n != 0) {
+        std::cout<<n->data<<"\n";
+        n = n->next;
+    }
+}
+
 
 int main() {
     struct Node *p1, *p2, *p3;
@@ -21,6 +33,7 @@ int main() {
     p2->next = p3;
 
     p3->data = 3;
-    p3->next = NULL;
+    p3->next = 0;
 
+    Print_Linked(p1);
 }

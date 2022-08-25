@@ -6,14 +6,14 @@
 using namespace std;
 
 void InsertionSort(int arr[], int n) {
-    for(int i = 1; i < n; i++) {
-        int x  = arr[i];
+    for(int i = 1; i < n; ++i) {
+
         int j = i-1;
-        while (j > -1 && x < arr[j]) {
+        while (arr[i] < arr[j]) {
             arr[j+1] = arr[j];
             j--;
         }
-        arr[j+1] = x;
+        arr[j+1] = arr[i];
     }
 }
 int main ()

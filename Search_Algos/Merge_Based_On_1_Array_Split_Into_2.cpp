@@ -25,7 +25,7 @@ void Merge(int a[], int l, int h, int mid) {
     for(; j < h+1; )
         b[k++] = a[j++];
 
-    for(int i = 0; i < h + 1; i++)
+    for(int i = l; i < h + 1; i++)
         a[i] = b[i];
 }
 

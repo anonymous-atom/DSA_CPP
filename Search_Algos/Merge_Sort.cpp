@@ -10,7 +10,7 @@ void Merge(int a[], int l, int h, int mid) {
     j = mid + 1;
     k = l;
     int b[h+1];
-    while(i < mid + 1 && j <= h) {
+    while(i <= mid && j <= h) {
         if(a[i] < a[j])
             b[k++] = a[i++];
 

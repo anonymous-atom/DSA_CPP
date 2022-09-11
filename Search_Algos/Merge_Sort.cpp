@@ -11,21 +11,17 @@ void Merge(int a[], int l, int h, int mid) {
     k = l;
     int b[h+1];
     while(i <= mid && j <= h) {
-        if(a[i] < a[j])
-            b[k++] = a[i++];
 
-        else
-            b[k++] = a[j++];
+        if (a[i] < a[j])  b[k++] = a[i++];
+
+        else b[k++] = a[j++];
     }
 
-    for(; i <= mid;)
-        b[k++] = a[i++];
+    for(; i <= mid;) b[k++] = a[i++];
 
-    for(; j <= h; )
-        b[k++] = a[j++];
+    for(; j <= h; ) b[k++] = a[j++];
 
-    for(int i = l; i <= h; i++)
-        a[i] = b[i];
+    for(int i = l; i <= h; i++) a[i] = b[i];
 }
 
 void MergeSort(int a[], int n) {

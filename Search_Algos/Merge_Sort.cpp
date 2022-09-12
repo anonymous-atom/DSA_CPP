@@ -28,12 +28,14 @@ void MergeSort(int a[], int n) {
     int P, i,l,h, mid;
 
     for(P = 2; P <= n; P*=2) {
+
         for(i = 0; i+P-1 < n; i+=P){
             l = i;
             h = i + P - 1;
             mid  = (l + h) / 2;
             Merge(a, l, h, mid);
         }
+
     }
     if(P/2 < n)
         Merge(a, 0, n-1, P/2);

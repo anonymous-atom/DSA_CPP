@@ -12,6 +12,7 @@ void Recursive_Display(Node *p) {
         cout << p->data << "\n";
     }
 }
+
 int main() {
     struct Node *p1, *p2, *p3;
 

@@ -26,7 +26,7 @@ void Queue::enqueue(int x) {
     if (rear == size - 1)
         std::cout <<"Queue is Full";
     else {
-        rear++;
+        rear = (rear + 1) % size;
         Q[rear] = x;
     }
 }
@@ -35,7 +35,7 @@ int Queue::dequeue() {
     if (front == rear)
         std::cout << "Queue is Empty";
     else {
-        front++;
+        front = (front + 1) % size;
         x = Q[front];
     }
     return x;
